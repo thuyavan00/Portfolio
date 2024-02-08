@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add this to the <head> section of your HTML -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Your Personal Website</title>
+    <style>
+      /* Make each section full height */
+      section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px; /* 30 pixels of padding on the top */
+        padding-bottom: 15px; /* 15 pixels of padding on the bottom */
+        padding: 20px; /* Add padding around the content within each section */
+        margin-bottom: 20px; /* Add a margin at the bottom of each section */
+        margin-top: 20px;
+      }
+
+      body {
+        font-family: 'Rubik', sans-serif; /* Apply Rubik font to the entire page */
+        color: white;
+        padding-top: 56px;
+      }
+
+      .timeline {
+        position: relative;
+        margin-top: 40px;
+      }
+
+      .about-item {
+        border-bottom: 2px solid #ccc;
+        margin-bottom: 20px;
+      }
+      .timeline-item {
+        position: relative;
+        padding: 20px;
+        border-left: 2px solid #ccc;
+        margin-bottom: 20px;
+      }
+
+      form {
+        position: relative;
+        padding: 20px;
+        border-right: 2px solid #ccc;
+        margin-bottom: 20px;
+      }
+
+      .timeline-content {
+        position: relative;
+        width: 50%;
+      }
+
+      .timeline-content h3 {
+        margin-top: 0;
+      }
+
+      .timeline-content p {
+        margin-bottom: 10px;
+      }
+
+      .buttons button {
+        margin-right: 10px;
+        margin-bottom: 10px;
+        background-color: #db7734;
+        color: #fff;
+      }
+
+      .card-footer button {
+        background-color: #34db77;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body
+    class="d-flex flex-column vh-100"
+    style="background-color: #28282c; color: white"
+  >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">
+        <img
+          src="static\images\tk.jpg"
+          alt="Your Logo"
+          class="mr-2 rounded-circle"
+          width="30"
+          height="30"
+        />
+        TK</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Home Section -->
+
+    <section id="home" class="py-5 my-5">
+      <div class="container">
+        <!-- Typed Text Row -->
+        <div class="row mb-4">
+          <div class="col text-center">
+            <h2 id="typed-text" class="display-4"></h2>
+          </div>
+        </div>
+        <!-- Image and Text Row -->
+        <div class="row align-items-center">
+          <!-- Image Column -->
+          <div class="col-md-5 mb-4 mb-md-0">
+            <img
+              src="static\images\images.png"
+              alt="Image Description"
+              class="img-fluid rounded"
+            />
+          </div>
+          <!-- Text Column -->
+          <div class="col-md-7">
+            <p class="lead text-center">
+              Hello! I'm Thuyavankannan Manoharan, a dedicated software
+              developer and engineer with a flair for transforming lines of code
+              into innovative solutions.
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col text-center">
+            <a href="#contact" class="btn btn-dark btn-lg">Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+
+    <section
+      id="about"
+      class="py-5 my-5"
+      style="background-color: #3498db; color: #fff"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2>About Me</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col text-center">
+            <div class="about-item"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <p class="lead text-center">
+              With a Master's degree from the University of Western Ontario and
+              hands-on experience gained through impactful internships, I bring
+              a unique blend of academic prowess and real-world expertise to the
+              dynamic realm of software development.
+              <br />
+              <br />
+              My approach is characterized by a meticulous attention to
+              user-centric design, efficient problem-solving, and a commitment
+              to delivering robust and scalable solutions.
+            </p>
+          </div>
+          <!-- Skills Column -->
+          <div class="col-md-6">
+            <h4>Skills</h4>
+            <div class="buttons">
+              <button class="btn">JavaScript</button>
+              <button class="btn">React</button>
+              <button class="btn">SQL</button>
+              <button class="btn">Java</button>
+              <button class="btn">Python</button>
+              <button class="btn">Express</button>
+              <button class="btn">GCP</button>
+              <button class="btn">HTML</button>
+              <button class="btn">CSS</button>
+              <button class="btn">Git</button>
+              <!-- Add more buttons for additional skills -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5 my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2>Experience</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <!-- Timeline Container -->
+            <div class="timeline">
+              <!-- Experience Item 1 -->
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h3>Intern, Data Analyst</h3>
+                  <p class="text-muted">Stellantis</p>
+                  <p>
+                    Created comprehensive sales and after-sales reports in Power
+                    BI, accompanied by an intuitive dashboard, facilitating
+                    data-driven decision-making for stakeholders and
+                    accelerating decision-making processes.
+                  </p>
+                  <p class="text-muted">Duration: Dec 2020 - April 2021</p>
+                </div>
+              </div>
+              <!-- Experience Item 2 -->
+              <div class="timeline-item">
+                <div class="timeline-content">
+                  <h3>Intern, Software Development</h3>
+                  <p class="text-muted">IIT Bombay</p>
+                  <p>
+                    Led the development of a collaborative Online Platform for
+                    the Blender community, utilizing PHP, MySQL, HTML, CSS, and
+                    JavaScript, following Agile methodologies.
+                  </p>
+                  <p class="text-muted">Duration: Nov 2019 - June 2020</p>
+                </div>
+              </div>
+              <!-- Add more experience items as needed -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="py-5 my-5"
+      style="background-color: #7734db; color: #fff"
+    >
+      <div class="container">
+        <h2 class="text-center">Projects</h2>
+
+        <div class="row">
+          <div class="col text-center">
+            <div class="about-item"></div>
+          </div>
+        </div>
+
+        <div class="card-deck">
+          <!-- Project 1 -->
+          <div class="card">
+            <img
+              src="static\images\place.png"
+              class="card-img-top"
+              alt="Project 1 Image"
+            />
+            <div class="card-body" style="color: #000">
+              <h5 class="card-title">Project 1</h5>
+              <p class="card-text">Description of Project 1.</p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="card">
+            <img
+              src="static\images\place.png"
+              class="card-img-top"
+              alt="Project 2 Image"
+            />
+            <div class="card-body" style="color: #000">
+              <h5 class="card-title">Project 2</h5>
+              <p class="card-text">Description of Project 2.</p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="card">
+            <img
+              src="static\images\place.png"
+              class="card-img-top"
+              alt="Project 3 Image"
+            />
+            <div class="card-body" style="color: #000">
+              <h5 class="card-title">Project 3</h5>
+              <p class="card-text">Description of Project 3.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2>Contact me</h2>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="row justify-content-center">
+          <!-- Form Column -->
+          <div class="col-md-6">
+            {% with messages = get_flashed_messages() %} {% if messages %}
+            <ul class="flash-messages">
+              {% for message in messages %}
+              <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+            {% endif %} {% endwith %}
+            <form action="{{ url_for('contact') }}" method="post">
+              <!-- Form fields go here -->
+              <div class="form-group">
+                <label for="name" class="text-white">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                />
+              </div>
+              <!-- Email Field -->
+              <div class="form-group">
+                <label for="email" class="text-white">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                />
+              </div>
+              <!-- Subject Field -->
+              <div class="form-group">
+                <label for="subject" class="text-white">Subject</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  name="subject"
+                  placeholder="Subject"
+                />
+              </div>
+              <!-- Number Field -->
+              <div class="form-group">
+                <label for="number" class="text-white">Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="number"
+                  name="phone"
+                  placeholder="Your Phone Number"
+                />
+              </div>
+              <!-- Message Field -->
+              <div class="form-group">
+                <label for="message" class="text-white">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+          </div>
+          <!-- Contact Information Column -->
+          <div class="col-md-6">
+            <h4 class="text-white">Contact Information</h4>
+            <p class="text-white">Email: kannanthuyavan@gmail.com</p>
+            <p class="text-white">Phone: +1 548 468 0727</p>
+            <!-- Add your social media icons/links here -->
+            <div class="social-links">
+              <a href="#" class="text-white mr-2"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-white mr-2"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var typed = new Typed('#typed-text', {
+          strings: ['Thuyavankannan Manoharan'],
+          typeSpeed: 75, // typing speed in milliseconds
+          showCursor: false, // hide the cursor
+        });
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
