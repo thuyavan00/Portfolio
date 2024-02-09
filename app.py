@@ -1,26 +1,26 @@
 from flask import Flask, render_template, request, flash
 from flask_mail import Mail, Message
 import os
-app = Flask(__name__)
+application = Flask(__name__)
 
 # Flask-Mail Configuration
 mail_username = os.environ.get('MAIL_USERNAME')
 mail_password = os.environ.get('MAIL_PASSWORD')
 
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
-app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = mail_username
-app.config['MAIL_PASSWORD'] = mail_password
+application.config['MAIL_SERVER'] = 'smtp.gmail.com'
+application.config['MAIL_PORT'] = 465
+application.config['MAIL_USE_SSL'] = True
+application.config['MAIL_USERNAME'] = mail_username
+application.config['MAIL_PASSWORD'] = mail_password
 
-mail = Mail(app)
+mail = Mail(application)
 
 
-@app.route('/')
+@application.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/contact', methods=['POST'])
+@application.route('/contact', methods=['POST'])
 def contact():
     if request.method == 'POST':
         name = request.form['name']
@@ -41,5 +41,5 @@ def contact():
         return render_template('index.html')
 
 if __name__ == '__main__':
-    app.secret_key = 'your_secret_key'
-    app.run(debug=True)
+    application.secret_key = 'tkm19722000'
+    application.run(debug=False)
