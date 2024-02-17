@@ -1,4 +1,4 @@
-- name: Accept Host Key
+name: Accept Host Key
   run: ssh-keyscan -H yec2-18-116-99-125.us-east-2.compute.amazonaws.com >> ~/.ssh/known_hosts
 
 
