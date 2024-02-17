@@ -103,29 +103,6 @@
       }
 
       /* Styles for the left animation */
-      .animate-left {
-        opacity: 0;
-        transform: translateX(-100%);
-        transition: opacity 1s, transform 1s;
-      }
-
-      /* Styles for the right animation */
-      .animate-right {
-        opacity: 0;
-        transform: translateX(100%);
-        transition: opacity 1s, transform 1s;
-      }
-
-      /* Apply styles when the element is in the viewport (you may need to adjust the values based on your layout) */
-      .about-container.in-viewport .animate-left {
-        opacity: 1;
-        transform: translateX(0);
-      }
-
-      .about-container.in-viewport .animate-right {
-        opacity: 1;
-        transform: translateX(0);
-      }
 
       .card-link {
         display: inline-block; /* Keeps the anchor inline, preventing it from taking full width */
@@ -248,37 +225,33 @@
 
         <div class="row about-container">
           <div class="col-md-6">
-            <div class="animate-left">
-              <p class="lead text-center">
-                With a Master's degree from the University of Western Ontario
-                and hands-on experience gained through impactful internships, I
-                bring a unique blend of academic prowess and real-world
-                expertise to the dynamic realm of software development.
-                <br />
-                <br />
-                My approach is characterized by a meticulous attention to
-                user-centric design, efficient problem-solving, and a commitment
-                to delivering robust and scalable solutions.
-              </p>
-            </div>
+            <p class="lead text-center">
+              With a Master's degree from the University of Western Ontario and
+              hands-on experience gained through impactful internships, I bring
+              a unique blend of academic prowess and real-world expertise to the
+              dynamic realm of software development.
+              <br />
+              <br />
+              My approach is characterized by a meticulous attention to
+              user-centric design, efficient problem-solving, and a commitment
+              to delivering robust and scalable solutions.
+            </p>
           </div>
           <!-- Skills Column -->
           <div class="col-md-6">
-            <div class="animate-right">
-              <h4>Skills</h4>
-              <div class="buttons">
-                <button class="btn">JavaScript</button>
-                <button class="btn">React</button>
-                <button class="btn">SQL</button>
-                <button class="btn">Java</button>
-                <button class="btn">Python</button>
-                <button class="btn">Express</button>
-                <button class="btn">GCP</button>
-                <button class="btn">HTML</button>
-                <button class="btn">CSS</button>
-                <button class="btn">Git</button>
-                <!-- Add more buttons for additional skills -->
-              </div>
+            <h4>Skills</h4>
+            <div class="buttons">
+              <button class="btn">JavaScript</button>
+              <button class="btn">React</button>
+              <button class="btn">SQL</button>
+              <button class="btn">Java</button>
+              <button class="btn">Python</button>
+              <button class="btn">Express</button>
+              <button class="btn">GCP</button>
+              <button class="btn">HTML</button>
+              <button class="btn">CSS</button>
+              <button class="btn">Git</button>
+              <!-- Add more buttons for additional skills -->
             </div>
           </div>
         </div>
@@ -506,26 +479,6 @@
             behavior: 'smooth',
           });
         });
-      });
-
-      document.addEventListener('DOMContentLoaded', function () {
-        // Get the about-container element
-        const aboutContainer = document.querySelector('.about-container');
-
-        // Set up the Intersection Observer
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add('in-viewport');
-              }
-            });
-          },
-          { threshold: 0.5 }
-        );
-
-        // Observe the about-container
-        observer.observe(aboutContainer);
       });
     </script>
   </body>
